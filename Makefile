@@ -34,4 +34,7 @@ sqlc-version:
 test:
 	go test -v -cover ./...
 
-.PHONY: postgres start stop createdb dropdb migrateup migratedown sqlc-pull sqlc-run sqlc-init test
+server:
+	go run main.go
+
+.PHONY: postgres start stop createdb dropdb migrateup migratedown sqlc-pull sqlc-run sqlc-init sqlc-run sqlc-version test server
